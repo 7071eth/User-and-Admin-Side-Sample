@@ -1,0 +1,25 @@
+<section>
+    <div class="container mt-5">
+        {{#if user}}
+                    <p>.</p>
+                    {{else}}
+                    <a href="/login" class="btn btn-success ms-auto mb-4" style="width: fit-content; ">Login</a>
+                    {{/if}}
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" 
+                    src="/product-images/{{this._id}}.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="h5 card-title">{{this.title}}</h5>
+                        <p class=" card-text">{{this.description}}</p>
+                        <p>Price:20m$</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

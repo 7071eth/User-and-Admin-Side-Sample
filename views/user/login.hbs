@@ -1,0 +1,29 @@
+<div class="row m-0">
+    <div class="col-md-6 m-auto">
+        <div class="containor mt-5 pl-5" >
+            <h2 class="text-center">Login</h2>
+            
+            <form action="/login" method="POST" onsubmit = "return(validateUser());" name="myForm" >
+            {{#if loginerr}}
+                <p class="error text-center" style="color: red;">Invalid username or password</p>
+            {{/if}}
+                <div class="form-group">
+                    <label>User name</label>
+                    <input type="text" class="form-control" name="Email" placeholder="Enter username">
+
+                </div>
+                <p id="username" style="color: red ;"></p>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="Password" placeholder="Password" >
+                </div>
+                <p id="password" style="color: red ;"></p>
+                 <a href="/signup" class="sign sign-info mt-5 " style="width: fit-content; text-decoration: none;">Create new account</a>
+                <div class="mx-auto mt-3" style=" width: fit-content;">
+                   
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
